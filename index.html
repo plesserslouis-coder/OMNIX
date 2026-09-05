@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>OMNIX</title>
+    <title>OMNIX — Minecraft Marketplace</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,218 +14,586 @@
 
     <!-- NAVIGATION -->
     <nav>
-
-        <div class="logo">
-            OMNIX
-        </div>
+        <div class="logo">OMNIX</div>
 
         <div class="nav-links">
-            <a href="#">Home</a>
             <a href="#shop">Shop</a>
             <a href="#categories">Categories</a>
             <a href="#about">About</a>
         </div>
 
-        <button class="login-btn">
-            Login
-        </button>
-
+        <button class="login-btn">Login</button>
     </nav>
 
 
     <!-- HERO -->
-    <main>
+    <header class="hero">
 
-        <section class="hero">
+        <p class="small-title">MINECRAFT MARKETPLACE</p>
 
-            <p class="small-title">
-                MINECRAFT MARKETPLACE
-            </p>
+        <h1>
+            Everything Minecraft.<br>
+            One marketplace.
+        </h1>
 
-            <h1>
-                Everything Minecraft.<br>
-                One marketplace.
-            </h1>
+        <p class="description">
+            Buy and sell Minecraft items with diamonds.
+        </p>
 
-            <p class="description">
-                Discover, buy and trade items, resources and more.
-            </p>
+        <a href="#shop">
+            <button class="shop-btn">
+                Explore Shop →
+            </button>
+        </a>
 
-            <a href="#shop">
-                <button class="shop-btn">
-                    Explore Shop →
-                </button>
-            </a>
-
-        </section>
+    </header>
 
 
-        <!-- SHOP -->
-        <section class="shop" id="shop">
+    <!-- SHOP -->
+    <section class="shop" id="shop">
 
-            <div class="section-title">
-
-                <p>
-                    MARKETPLACE
-                </p>
-
-                <h2>
-                    Featured Items
-                </h2>
-
-            </div>
+        <div class="section-title">
+            <p>MARKETPLACE</p>
+            <h2>Shop</h2>
+        </div>
 
 
-            <div class="products">
-
-
-                <!-- PRODUCT 1 -->
-                <div class="product">
-
-                    <div class="item-icon">
-                        ⛏️
-                    </div>
-
-                    <h3>
-                        Diamond Pickaxe
-                    </h3>
-
-                    <p>
-                        Efficiency V · Unbreaking III
-                    </p>
-
-                    <span>
-                        500 Coins
-                    </span>
-
-                    <button>
-                        Buy Now
-                    </button>
-
-                </div>
-
-
-                <!-- PRODUCT 2 -->
-                <div class="product">
-
-                    <div class="item-icon">
-                        ⚔️
-                    </div>
-
-                    <h3>
-                        Diamond Sword
-                    </h3>
-
-                    <p>
-                        Sharpness V · Looting III
-                    </p>
-
-                    <span>
-                        750 Coins
-                    </span>
-
-                    <button>
-                        Buy Now
-                    </button>
-
-                </div>
-
-
-                <!-- PRODUCT 3 -->
-                <div class="product">
-
-                    <div class="item-icon">
-                        💎
-                    </div>
-
-                    <h3>
-                        Diamond Pack
-                    </h3>
-
-                    <p>
-                        64 Diamonds
-                    </p>
-
-                    <span>
-                        1,000 Coins
-                    </span>
-
-                    <button>
-                        Buy Now
-                    </button>
-
-                </div>
-
-
-            </div>
-
-        </section>
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Minecraft items..."
+            >
+        </div>
 
 
         <!-- CATEGORIES -->
-        <section class="categories" id="categories">
+        <div class="category-buttons" id="categories">
 
-            <div class="section-title">
+            <button class="category-btn active" data-category="All">
+                All
+            </button>
 
-                <p>
-                    EXPLORE
-                </p>
+            <button class="category-btn" data-category="Blocks">
+                Blocks
+            </button>
 
-                <h2>
-                    Categories
-                </h2>
+            <button class="category-btn" data-category="Ores">
+                Ores
+            </button>
+
+            <button class="category-btn" data-category="Tools">
+                Tools
+            </button>
+
+            <button class="category-btn" data-category="Combat">
+                Combat
+            </button>
+
+            <button class="category-btn" data-category="Armor">
+                Armor
+            </button>
+
+            <button class="category-btn" data-category="Food">
+                Food
+            </button>
+
+            <button class="category-btn" data-category="Farming">
+                Farming
+            </button>
+
+            <button class="category-btn" data-category="Nether">
+                Nether
+            </button>
+
+            <button class="category-btn" data-category="End">
+                End
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="products" id="products">
+
+
+            <!-- DIAMOND PICKAXE -->
+            <div class="product" data-category="Tools">
+
+                <div class="item-icon">⛏️</div>
+
+                <h3>Diamond Pickaxe</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>5 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>3 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
 
             </div>
 
 
-            <div class="category-list">
+            <!-- DIAMOND SWORD -->
+            <div class="product" data-category="Combat">
 
-                <div class="category">
-                    ⚔️
-                    <h3>Weapons</h3>
+                <div class="item-icon">⚔️</div>
+
+                <h3>Diamond Sword</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>5 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>3 💎</strong>
+                    </div>
+
                 </div>
 
-                <div class="category">
-                    🛡️
-                    <h3>Armor</h3>
-                </div>
+                <div class="product-buttons">
 
-                <div class="category">
-                    ⛏️
-                    <h3>Resources</h3>
-                </div>
+                    <button class="buy">
+                        Buy
+                    </button>
 
-                <div class="category">
-                    🧪
-                    <h3>Potions</h3>
+                    <button class="sell">
+                        Sell
+                    </button>
+
                 </div>
 
             </div>
 
-        </section>
+
+            <!-- DIAMOND CHESTPLATE -->
+            <div class="product" data-category="Armor">
+
+                <div class="item-icon">🛡️</div>
+
+                <h3>Diamond Chestplate</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>8 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>5 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
 
 
-        <!-- ABOUT -->
-        <section class="about" id="about">
+            <!-- IRON -->
+            <div class="product" data-category="Ores">
 
-            <p class="small-title">
-                ABOUT OMNIX
-            </p>
+                <div class="item-icon">⛓️</div>
 
-            <h2>
-                Everything you need.<br>
-                In one place.
-            </h2>
+                <h3>Iron</h3>
 
-            <p>
-                OMNIX is a Minecraft marketplace
-                created for players who want a simple
-                way to discover and trade items.
-            </p>
+                <p>32 items</p>
 
-        </section>
+                <div class="prices">
 
-    </main>
+                    <div>
+                        <small>BUY</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>0 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell disabled">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- GOLD -->
+            <div class="product" data-category="Ores">
+
+                <div class="item-icon">🟨</div>
+
+                <h3>Gold</h3>
+
+                <p>16 items</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>0 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell disabled">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIAMONDS -->
+            <div class="product" data-category="Ores">
+
+                <div class="item-icon">💎</div>
+
+                <h3>Diamond</h3>
+
+                <p>4 items</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- OBSIDIAN -->
+            <div class="product" data-category="Blocks">
+
+                <div class="item-icon">⬛</div>
+
+                <h3>Obsidian</h3>
+
+                <p>16 items</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>2 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENDER PEARL -->
+            <div class="product" data-category="End">
+
+                <div class="item-icon">🟣</div>
+
+                <h3>Ender Pearl</h3>
+
+                <p>8 items</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>2 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>1 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BLAZE ROD -->
+            <div class="product" data-category="Nether">
+
+                <div class="item-icon">🔥</div>
+
+                <h3>Blaze Rod</h3>
+
+                <p>8 items</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>3 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>2 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ANCIENT DEBRIS -->
+            <div class="product" data-category="Nether">
+
+                <div class="item-icon">🟫</div>
+
+                <h3>Ancient Debris</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>5 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>3 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- NETHERITE INGOT -->
+            <div class="product" data-category="Nether">
+
+                <div class="item-icon">⬛</div>
+
+                <h3>Netherite Ingot</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>18 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>12 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ELYTRA -->
+            <div class="product" data-category="End">
+
+                <div class="item-icon">🪽</div>
+
+                <h3>Elytra</h3>
+
+                <p>1 item</p>
+
+                <div class="prices">
+
+                    <div>
+                        <small>BUY</small>
+                        <strong>30 💎</strong>
+                    </div>
+
+                    <div>
+                        <small>SELL</small>
+                        <strong>20 💎</strong>
+                    </div>
+
+                </div>
+
+                <div class="product-buttons">
+
+                    <button class="buy">
+                        Buy
+                    </button>
+
+                    <button class="sell">
+                        Sell
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <p class="small-title">ABOUT OMNIX</p>
+
+        <h2>
+            Everything you need.<br>
+            In one place.
+        </h2>
+
+        <p>
+            OMNIX is a Minecraft marketplace where
+            players can buy and sell items using diamonds.
+        </p>
+
+    </section>
 
 
     <!-- FOOTER -->
@@ -236,11 +604,13 @@
         </div>
 
         <p>
-            © 2026 OMNIX. All rights reserved.
+            © 2026 OMNIX
         </p>
 
     </footer>
 
-</body>
 
+    <script src="script.js"></script>
+
+</body>
 </html>
