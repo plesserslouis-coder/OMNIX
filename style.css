@@ -1,17 +1,104 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0d;
+    color: white;
     font-family: Arial, sans-serif;
-    background: #111;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+    border-bottom: 1px solid #25252b;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #a1a1aa;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
     color: white;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 100px;
-    font-size: 60px;
+.login-btn {
+    background: transparent;
+    border: 1px solid #3a3a42;
+    color: white;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    cursor: pointer;
 }
 
-p {
+/* HERO */
+
+.hero {
     text-align: center;
-    font-size: 20px;
+
+    padding-top: 150px;
+}
+
+.small-title {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #9a9aa3;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.shop-btn {
+    background: white;
+    color: black;
+
+    border: none;
+
+    padding: 16px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.shop-btn:hover {
+    transform: scale(1.05);
 }
