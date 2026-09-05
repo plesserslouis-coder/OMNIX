@@ -15,39 +15,35 @@ body {
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav {
-    height: 80px;
-
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 8%;
+    padding: 0 6%;
 
     border-bottom: 1px solid #24242a;
     background: #0b0b0d;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing: 5px;
 }
 
 .nav-links {
     display: flex;
-    gap: 35px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #9a9aa3;
+    color: #9999a3;
     text-decoration: none;
-
-    transition: 0.2s;
+    font-size: 14px;
 }
 
 .nav-links a:hover {
@@ -55,31 +51,26 @@ nav {
 }
 
 .login-btn {
-    padding: 10px 20px;
+    padding: 9px 18px;
 
     background: transparent;
     color: white;
 
-    border: 1px solid #3a3a42;
-    border-radius: 8px;
+    border: 1px solid #38383f;
+    border-radius: 7px;
 
     cursor: pointer;
 }
 
-.login-btn:hover {
-    background: #1a1a1f;
-}
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 650px;
+    min-height: 560px;
 
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
@@ -90,152 +81,29 @@ nav {
 
 .small-title {
     color: #777780;
-
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 4px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 70px;
-    line-height: 1.1;
+    font-size: 64px;
+    line-height: 1.08;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .description {
     color: #9999a3;
 
-    font-size: 18px;
+    font-size: 17px;
 
-    max-width: 600px;
-
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .shop-btn {
-    padding: 16px 28px;
-
-    background: white;
-    color: black;
-
-    border: none;
-    border-radius: 8px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.shop-btn:hover {
-    transform: translateY(-2px);
-}
-
-
-/* =========================
-   SHOP
-========================= */
-
-.shop {
-    padding: 100px 8%;
-}
-
-.section-title {
-    text-align: center;
-
-    margin-bottom: 50px;
-}
-
-.section-title p {
-    color: #777780;
-
-    font-size: 12px;
-    letter-spacing: 4px;
-}
-
-.section-title h2 {
-    font-size: 42px;
-
-    margin-top: 12px;
-}
-
-.products {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-    max-width: 1200px;
-
-    margin: auto;
-}
-
-.product {
-    background: #151519;
-
-    border: 1px solid #29292f;
-
-    border-radius: 14px;
-
-    padding: 30px;
-
-    transition: 0.2s;
-}
-
-.product:hover {
-    transform: translateY(-6px);
-
-    border-color: #55555e;
-}
-
-.item-icon {
-    height: 150px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 75px;
-
-    background: #101014;
-
-    border-radius: 10px;
-
-    margin-bottom: 25px;
-}
-
-.product h3 {
-    font-size: 21px;
-
-    margin-bottom: 10px;
-}
-
-.product p {
-    color: #85858e;
-
-    font-size: 14px;
-
-    margin-bottom: 20px;
-}
-
-.product span {
-    display: block;
-
-    font-size: 17px;
-    font-weight: bold;
-
-    margin-bottom: 20px;
-}
-
-.product button {
-    width: 100%;
-
-    padding: 12px;
+    padding: 14px 25px;
 
     background: white;
     color: black;
@@ -244,141 +112,318 @@ nav {
     border-radius: 7px;
 
     font-weight: bold;
-
     cursor: pointer;
 }
 
-.product button:hover {
-    background: #dddddd;
+
+/* SHOP */
+
+.shop {
+    padding: 90px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title p {
+    color: #777780;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin-top: 10px;
 }
 
 
-/* =========================
-   CATEGORIES
-========================= */
+/* SEARCH */
 
-.categories {
-    padding: 100px 8%;
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 25px;
 }
 
-.category-list {
+.search-box input {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    background: #151519;
+    color: white;
+
+    border: 1px solid #29292f;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #55555e;
+}
+
+
+/* CATEGORY BUTTONS */
+
+.category-buttons {
+    max-width: 1100px;
+
+    margin: 0 auto 35px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.category-btn {
+    padding: 8px 13px;
+
+    background: #151519;
+    color: #9999a3;
+
+    border: 1px solid #29292f;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.category-btn:hover {
+    color: white;
+}
+
+.category-btn.active {
+    background: white;
+    color: black;
+}
+
+
+/* PRODUCTS */
+
+.products {
     max-width: 1200px;
 
     margin: auto;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(auto-fill, minmax(165px, 1fr));
 
-    gap: 20px;
+    gap: 12px;
 }
 
-.category {
-    padding: 35px 20px;
 
-    text-align: center;
+/* PRODUCT CARD */
 
+.product {
     background: #151519;
 
     border: 1px solid #29292f;
 
-    border-radius: 12px;
+    border-radius: 9px;
 
-    font-size: 45px;
+    padding: 12px;
 
     transition: 0.2s;
 }
 
-.category:hover {
-    transform: translateY(-5px);
+.product:hover {
+    transform: translateY(-3px);
 
-    border-color: #55555e;
-}
-
-.category h3 {
-    font-size: 18px;
-
-    margin-top: 15px;
+    border-color: #4a4a52;
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* ITEM */
+
+.item-icon {
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #101014;
+
+    border-radius: 7px;
+
+    margin-bottom: 10px;
+
+    font-size: 45px;
+}
+
+.product h3 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.product p {
+    color: #777780;
+
+    font-size: 11px;
+
+    margin-bottom: 12px;
+}
+
+
+/* PRICES */
+
+.prices {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.prices div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.prices small {
+    color: #66666e;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.prices strong {
+    font-size: 12px;
+}
+
+
+/* BUTTONS */
+
+.product-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5px;
+}
+
+.product-buttons button {
+    padding: 7px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.buy {
+    background: white;
+    color: black;
+
+    border: none;
+}
+
+.sell {
+    background: transparent;
+    color: white;
+
+    border: 1px solid #3a3a42;
+}
+
+.sell:hover {
+    background: #222228;
+}
+
+.disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+}
+
+
+/* ABOUT */
 
 .about {
     text-align: center;
 
-    padding: 130px 20px;
+    padding: 110px 20px;
 
     border-top: 1px solid #24242a;
 }
 
 .about h2 {
-    font-size: 45px;
+    font-size: 40px;
 
     line-height: 1.2;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .about > p:last-child {
-    max-width: 600px;
+    max-width: 550px;
 
     margin: auto;
 
-    color: #8b8b94;
+    color: #85858e;
 
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-    padding: 40px 8%;
+    padding: 35px 6%;
 
     border-top: 1px solid #24242a;
 
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 }
 
 footer p {
     color: #66666e;
 
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
     .nav-links {
         display: none;
     }
 
     .hero h1 {
-        font-size: 45px;
+        font-size: 42px;
     }
 
     .products {
-        grid-template-columns: 1fr;
-    }
-
-    .category-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     footer {
         flex-direction: column;
-        gap: 20px;
+
+        gap: 15px;
     }
 }
